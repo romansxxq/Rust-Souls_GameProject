@@ -5,12 +5,12 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     [Header("Move and jump Settings")]
-    public float moveSpeed = 5f;
-    public float jumpForce = 15f;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float jumpForce = 15f;
     [Header("Dash Settings")]
-    public float dashSpeed = 10f;
-    public float dashDuration = 0.2f;
-    public float dashCooldown = 1f;
+    [SerializeField] private float dashSpeed = 10f;
+    [SerializeField] private float dashDuration = 0.2f;
+    [SerializeField] private float dashCooldown = 1f;
 
     private Rigidbody2D rb;
     private float moveInputX;
