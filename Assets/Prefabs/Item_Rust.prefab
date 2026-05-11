@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4074379711723930249}
   - component: {fileID: 5459473642529948764}
   - component: {fileID: 6027599604034460752}
+  - component: {fileID: 5798048091596696779}
   m_Layer: 0
   m_Name: Item_Rust
   m_TagString: Rust
@@ -134,3 +135,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5798048091596696779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959398662941296433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a05179ebfaf6345b717d8ca6e75f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resourceType: Rust
+  amount: 1
