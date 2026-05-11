@@ -3,12 +3,12 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     [Header("Налаштування атаки")]
-    public Transform attackPoint; // Точка, звідки йде удар
-    public float attackRange = 0.5f; // Радіус ураження
-    public int attackDamage = 25; // Скільки ХП знімаємо
-    public float attackCooldown = 0.5f; // Затримка між ударами
+    [SerializeField] private Transform attackPoint; // Точка, звідки йде удар
+    [SerializeField] private float attackRange = 0.5f; // Радіус ураження
+    [SerializeField] private int attackDamage = 25; // Скільки ХП знімаємо
+    [SerializeField] private float attackCooldown = 0.5f; // Затримка між ударами
 
-    public LayerMask enemyLayers; // Вказуємо шар ворогів
+    [SerializeField] private LayerMask enemyLayers; // Вказуємо шар ворогів
 
     private float nextAttackTime = 0f;
 

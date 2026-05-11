@@ -4,8 +4,8 @@ using UnityEngine.UI; // Для роботи з базовим UI
 public class PlayerInventory : MonoBehaviour
 {
     [Header("Ресурси")]
-    public int rustCount = 0;
-    public int soulsCount = 0;
+    [SerializeField] private int rustCount = 0;
+    [SerializeField] private int soulsCount = 0;
 
     [Header("UI Елементи")]
     public TMPro.TextMeshProUGUI rustText;

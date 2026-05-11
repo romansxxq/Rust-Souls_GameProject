@@ -4,8 +4,12 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     [Header("Налаштування здоров'я")]
-    public int maxHealth = 100;
-    public int currentHealth;
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int currentHealth;
+    [SerializeField] private bool disablePlayerOnDeath = false;
+
+    public int CurrentHealth => currentHealth;
+    public int MaxHealth => maxHealth;
 
     // ДОДАНО: Прапорець невразливості
     public bool isInvincible = false; 
@@ -46,14 +50,17 @@ public class Health : MonoBehaviour
         if (gameObject.CompareTag("Player"))
         {
             Debug.Log("Гравець помер!");
-            gameObject.SetActive(false);
+            if (disablePlayerOnDeath)
+            {
+                gameObject.SetActive(false);
+            }
         }
         else 
         {
             if (dropPrefab != null)
             {
                 // Створюємо префаб на місці ворога
-                Instantiate(dropPrefab, transform.position, Quaternion.identity);
+                SimpleObjectPool.Instance.Spawn(dropPrefab, transform.position, Quaternion.identity);
             }
             Destroy(gameObject);
         }

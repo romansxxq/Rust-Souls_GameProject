@@ -3,8 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyAI : MonoBehaviour
 {
-    public float speed = 3f;
-    public int damage = 10;
+    [SerializeField] private float speed = 3f;
+    [SerializeField] private int damage = 10;
     
     private Transform player;
     private Rigidbody2D rb;

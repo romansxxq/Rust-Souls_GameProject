@@ -20,7 +20,7 @@ public class CollectibleItem : MonoBehaviour
                 inventory.AddResource(resourceType, amount);
                 
                 // Знищуємо предмет зі сцени
-                Destroy(gameObject);
+                SimpleObjectPool.Instance.Despawn(gameObject);
             }
         }
     }
