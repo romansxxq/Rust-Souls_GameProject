@@ -188,9 +188,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             if (!string.IsNullOrEmpty(walkFloatParam))
-            {
                 animator.SetFloat(walkFloatParam, speed);
-            }
+
         }
     }
 
