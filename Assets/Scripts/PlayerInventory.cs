@@ -7,6 +7,9 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private int rustCount = 0;
     [SerializeField] private int soulsCount = 0;
 
+    public int RustCount  => rustCount;
+    public int SoulsCount => soulsCount;
+
     [Header("UI Елементи")]
     public TMPro.TextMeshProUGUI rustText;
     public TMPro.TextMeshProUGUI soulsText;
