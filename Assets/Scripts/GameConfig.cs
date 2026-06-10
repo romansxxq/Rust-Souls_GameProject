@@ -25,4 +25,11 @@ public class GameConfig : ScriptableObject
     public bool killAllEnemies = true;
     public int rustToWin = 0;  // 0 = не потрібно
     public int soulsToWin = 0; // 0 = не потрібно
+
+    [Header("Генерація забігу")]
+    public int roomsPerRun = 15;
+    public int pathChoices = 2;
+    [Range(0f, 1f)] public float eliteChance = 0.15f;
+    [Range(0f, 1f)] public float eventChance = 0.25f;
+    [Range(0f, 1f)] public float shopChance  = 0.10f;
 }
